@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<title>Anonymous</title>
+	<link rel="stylesheet" type="text/css" href="css/headerStyle.css">
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
+	<link rel="stylesheet" type="text/css" href="css/contentStyle.css">
+	<link rel="stylesheet" type="text/css" href="css/footerStyle.css">
+	<script type="text/javascript" src="javaScript/indexJS.js"></script>
+<script>
+// Making the topBar responsive. 
+// Note: if you want to add extra links in menu, after adding the link you also have to increase the margin in the "slideshow.style.margin"  below
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+
+  
+	var slideshow = document.getElementById('slideshow');
+
+	if(slideshow.style.margin == "150px 20px"){
+		slideshow.style.margin = " 10px 5%";
+		// slideshow.style.height = "150px";
+	}
+	else {
+		slideshow.style.margin = "150px 20px";
+	}
+
+
+
+	var topContent = document.getElementById('topContents');
+	if(topContent.style.margin > "10px"){
+		topContent.style.margin = " 10px";
+	}
+	// else {
+	// 	topContent.style.margin = "10px 20px";
+	// }
+}
+
+
+function goToTop() {
+	window.scroll(0,0);
+}
+
+
+</script>
+
+
+
+	
+</head>
+<body>
+<div class="mainBody">
+	<div class="header">
+		<div class="topBar" id="topBar">
+			<div class="social-icons">
+				<img src="images/facebook.svg" class="soical-icons-link">
+				<img src="images/linkedin.svg" class="soical-icons-link">
+				<img src="images/twitter.svg" class="soical-icons-link">
+				<img src="images/youtube.svg" class="soical-icons-link">
+			</div>
+
+			<div class="right-top-links">
+				
+				<span class="right-top-link"><a href="#archivedNews">Archived News</a></span>
+				<span class="right-top-link"><a href="#rssFeeds">RSS Feeds</a> | </span>
+				
+				<span class="right-top-link"><a href="form/signUp.html">Sign Up</a> | </span>
+				<span class="right-top-link"><a href="#login">Login</a> |</span>
+			</div>
+		</div>
+
+		<div class="toggle-topBar" onclick="toggle_topBar();" id="toggle-topBar">-</div><br><br>
+
+
+		<div class="logoAndSearch" id="logoAndSearch">
+			<div class="logo"><img src="images/logo.png" class="logo-img" alt="Company logo"></div>
+
+			<div class="searchAndSubmit">
+				<input type="text" name="search" placeholder="Search our Website..." class="search search-box">
+				<input type="submit" name="submit" value="Submit" class="search search-submit">
+			</div>
+		</div>
+
+
+
+		<!--<div class="menu">
+			<ul>
+				<li>Home</li>
+				<li>About</li>
+				<li>Contact</li>
+				<li>Drowdown</li>
+				<li>Others</li>
+
+			</ul> 
+			<a href="#" class="link">Home</a>
+			<a href="#" class="link">Gallery</a>
+			<a href="#" class="link">Dropdown</a>
+			<a href="#" class="link">Portfolio</a>
+
+		</div> -->
+
+
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+
+		
+</div>
+<!-- Header ended-->
+
+
+
+
+
+<!-- Slider -->
+<div class="slideshow-container" id="slideshow">
+
+	<div class="myslides fade ">
+		<div class="numbers">1 / 4</div>
+		<div><img src="images/sliderImage/alex.jpg" class="slider-image"></div>
+		<div class="caption">Text 1</div>
+	</div>
+
+	<div class="myslides fade">
+		<div class="numbers">2 / 4</div>
+		<div><img src="images/sliderImage/denys.jpg" class="slider-image"></div>
+		<div class="caption">Text 2</div>
+	</div>
+
+	<div class="myslides fade">
+		<div class="numbers">3 / 4</div>
+		<div><img src="images/sliderImage/denys1.jpg" class="slider-image"></div>
+		<div class="caption">Text 3</div>
+	</div>
+
+	<div class="myslides fade">
+		<div class="numbers">4 / 4</div>
+		<div><img src="images/sliderImage/jordan.jpg" class="slider-image"></div>
+		<div class="caption">Text 4</div>
+	</div>
+
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(+1)">&#10095;</a>
+
+	<div>
+  		<span class="dots" onclick="currentSlide(1)"></span> 
+  		<span class="dots" onclick="currentSlide(2)"></span> 
+  		<span class="dots" onclick="currentSlide(3)"></span> 
+  		<span class="dots" onclick="currentSlide(4)"></span> 
+	</div>
+
+</div>
+<!--Slider ended here-->
+
+
+
+
+
+
+<!--Top content goes here -->
+
+<div class="topContents">
+	<center>
+	<div class="topContent topContent1 ">
+		<img src="images/icon1.png" class="top-content-icon">
+		<h3 class="top-content-text" style="color: #2aa2d4; font-size: 25px; font-family: Palatino Linotype; text-align: center;">Satisfied Clients </h3>
+		<p class="top-content-text">We have changed the lives of so many people. You are also given 2 weeks money back guarantee if you are not satisfied from our services</p>
+	</div>
+	<div class="topContent topContent2">
+		<img src="images/worldIcon.png" class="top-content-icon">
+		<h3 class="top-content-text" style="color: #2aa2d4; font-size: 25px; font-family: Palatino Linotype; text-align: center;">We are global </h3>
+		<p class="top-content-text">From Cape Town to Helsenki. We have clients from all over the world. We are absolutely honored to be able to serve people across the world.</p>
+	</div>
+	<div class="topContent topContent3">
+		<img src="images/settingIcon.png" class="top-content-icon">
+		<h3 class="top-content-text" style="color: #2aa2d4; font-size: 25px; font-family: Palatino Linotype; text-align: center;">24 7 Support </h3>
+		<p class="top-content-text">We work round the clock to support our clients. If you have any queries or issues we are here eagerly waiting to help you resolve it</p>
+	</div>
+	<div class="topContent topContent4">
+		<img src="images/flowerIcon.png" class="top-content-icon">
+		<h3 class="top-content-text" style="color: #2aa2d4; font-size: 25px; font-family: Palatino Linotype; text-align: center;">Satisfied Clients </h3>
+		<p class="top-content-text">We have have changed the lives of so many people. You are also given 2 weeks money back guarantee if you are not satisfied from our services</p>
+	</div>
+</center>
+</div>
+
+<!--Top content ended here -->
+
+
+
+
+
+<!--Middle Content goes here-->
+<div class="middleContents">
+	<center>
+	<div class="middleContent middleContent1 ">
+		<img src="images/middleContentImg1.jpg" class="top-content-img">
+		<h3 class="top-content-text" style="color: #2aa2d4; font-size: 25px; font-family: Palatino Linotype; text-align: center;">Satisfied Clients </h3>
+		<p class="top-content-text">We have changed the lives of so many people. You are also given 2 weeks money back guarantee if you are not satisfied from our services</p>
+	</div>
+	<div class="middleContent middleContent2">
+		<img src="images/middleContentImg2.jpg" class="top-content-img">
+		<h3 class="top-content-text" style="color: #2aa2d4; font-size: 25px; font-family: Palatino Linotype; text-align: center;">We are global </h3>
+		<p class="top-content-text">From Cape Town to Helsenki. We have clients from all over the world. We are absolutely honored to be able to serve people across the world.</p>
+	</div>
+	<div class="middleContent middleContent3">
+		<img src="images/middleContentImg3.jpg" class="top-content-img">
+		<h3 class="top-content-text" style="color: #2aa2d4; font-size: 25px; font-family: Palatino Linotype; text-align: center;">24 7 Support </h3>
+		<p class="top-content-text">We work round the clock to support our clients. If you have any queries or issues we are here eagerly waiting to help you resolve it</p>
+	</div>
+	<div class="middleContent middleContent4">
+		<img src="images/middleContentImg4.jpg" class="top-content-img">
+		<h3 class="top-content-text" style="color: #2aa2d4; font-size: 25px; font-family: Palatino Linotype; text-align: center;">Satisfied Clients </h3>
+		<p class="top-content-text">We have have changed the lives of so many people. You are also given 2 weeks money back guarantee if you are not satisfied from our services</p>
+	</div>
+</center>
+</div>
+<!--Middle content ended here-->
+
+
+
+
+
+<!--Bottom Content starts here -->
+<div class="bottomContents">
+	<center>
+	<div class="bottomContent bottomContent1 ">
+		<!-- <img src="images/bottomContentImg1.jpg" class="bottom-content-img"> -->
+		<h5 class="bottom-content-text" style="color: black; font-size: 40px; text-align: center;">Meet Our Team </h5>
+		<!-- <p class="bottom-content-text">We have changed the lives of so many people. You are also given 2 weeks money back guarantee if you are not satisfied from our services</p> -->
+	</div>
+	<div class="bottomContent bottomContent2">
+		<img src="images/bottomContentImg1.jpg" class="bottom-content-img">
+		<h3 class="bottom-content-text" style="color: #2aa2d4; font-size: 25px; font-family: Palatino Linotype; text-align: center;">We are global </h3>
+		<p class="bottom-content-text">From Cape Town to Helsenki. We have clients from all over the world. We are absolutely honored to be able to serve people across the world.</p>
+	</div>
+	<div class="bottomContent bottomContent3">
+		<img src="images/bottomContentImg2.jpg" class="bottom-content-img">
+		<h3 class="bottom-content-text" style="color: #2aa2d4; font-size: 25px; font-family: Palatino Linotype; text-align: center;">24 7 Support </h3>
+		<p class="bottom-content-text">We work round the clock to support our clients. If you have any queries or issues we are here eagerly waiting to help you resolve it</p>
+	</div>
+	<div class="bottomContent bottomContent4">
+		<img src="images/bottomContentImg3.jpg" class="bottom-content-img">
+		<h3 class="bottom-content-text" style="color: #2aa2d4; font-size: 25px; font-family: Palatino Linotype; text-align: center;">Satisfied Clients </h3>
+		<p class="bottom-content-text">We have have changed the lives of so many people. You are also given 2 weeks money back guarantee if you are not satisfied from our services</p>
+	</div>
+</center>
+</div>
+<!--Bottom content ended here -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Footer starts here-->
+<div class="footer">
+		<div class="topSpacer"> <a  onclick="goToTop();" class="goToTop"><img src="images/upImage.svg" class="top"></a> </div>
+		<div class="quickLinksAndInfo">
+			<div class="ourDetail"> Company Details
+				<div class="ourDetailsub"><p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua.<br>
+				<br>De VAMP pvt.ltd <br> Gangabu,Samakhusi <br> 44600 <br> Tel:1234567890 
+				<br> Fax : 1234 <br> Email:Vamp@devamp.com
+					</p>  
+				</div> 
+			</div>
+			<div class="latestBlog"> Latest Blog Post <div class="latestBlogsub">
+				<br> Earn Online 
+				<br> Earn Online 
+				<br> Earn Online 
+			</div></div>
+			<div class="quickLinks"> Quick links <br> <div> <br> 
+				 <a href="#Home" class="topLink"> ▶ HOME</a> <br>
+				 <a href="#Home" class="topLink"> ▶ Contact Us</a> <br>
+				 <a href="#Home" class="topLink"> ▶ Location</a> <br>
+				 <a href="#Home" class="topLink"> ▶  Our Works</a> <br>
+				</div>	
+			</div>
+			<div class="quickContact"> Contact Us <div > <br> 
+				<input type="text" name="fname" placeholder="Name" class="quickContactsub"> <br> <br>
+				<input type="text" name="email" placeholder="example@gmail.com" class="quickContactsub"> <br> <br>
+				<input type="text" placeholder="Message" class="txt">  <br> <br>
+				<input type="submit" name="sub_button" class="button"/>
+				
+			</div></div>
+		</div>
+		<div class="bottomSpacer"><center><p class = "copyright">Copyright © 2018 Stainlys' Inc. All rights Reserved.</p></center></div>
+		
+	</div>
+<!--Footer ends here-->
+
+
+
+
+
+
+</div>
+
+
+
+<script type="text/javascript" src="javaScript/slider.js"></script>
+</body>
+</html>
